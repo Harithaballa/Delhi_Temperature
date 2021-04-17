@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text: "Delhi Temperature"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		//title:
+	},
+	data: [{
+		type: "bar",
+		name:"Month",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: 15, label: "Jan" },
+			{ y: 18, label: "Feb" },
+			{ y: 23, label: "March" },
+			{ y: 29, label: "April" },
+			{ y: 32, label: "May" },
+			{ y: 35, label: "June" },
+			{ y: 29, label: "july" },
+			{ y: 28, label: "August" },
+			{ y: 27, label: "Csep" },
+			{ y: 25, label: "oct" },
+			{ y: 20, label: "Nov" },
+			{ y: 17, label: "Dec" }
+			
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
